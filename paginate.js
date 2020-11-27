@@ -31,7 +31,7 @@ const paginate = async (model, pageSize, pageLimit, search = {}, order = [], tra
 
     // check if search object is empty
     if(Object.keys(search).length) {
-      options = {options, ...search}
+      options = {...options, ...search}
     }
 
     // check if the order array is empty
